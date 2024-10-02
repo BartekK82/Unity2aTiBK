@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] float VectorX = 1;
-    [SerializeField] float VectorY = 0;
-    [SerializeField] float VectorZ = 0;
-    
-    // Start is called before the first frame update
+    [SerializeField] float vectorX;
+    [SerializeField] float vectorY = 0;
+    [SerializeField] float vectorZ; 
+    [SerializeField] float speed = 20;
+
+    // 
     void Start()
     {
     
@@ -17,6 +18,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(VectorX  * Time.deltaTime, VectorY, VectorZ);  
+        vectorX = Input.GetAxis("Horizontal");
+        vectorZ = Input.GetAxis("Vertical");
+        transform.Translate(vectorX  * Time.deltaTime * speed, vectorY, vectorZ * Time.deltaTime * speed);  
     }
 }
