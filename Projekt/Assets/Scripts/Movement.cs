@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     [SerializeField] float vectorX;
     [SerializeField] float vectorY = 0;
     [SerializeField] float vectorZ; 
-    [SerializeField] float speed = 20;
+    [SerializeField] float speed = 5;
 
     // 
     void Start()
