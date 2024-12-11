@@ -852,6 +852,23 @@ MonoBehaviour:
   vectorY: 0
   vectorZ: 0
   speed: 5
+  actionJump:
+    m_Name: Action Jump
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 367934d5-3889-43e8-9a6e-4caebefd1fe8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d3ada6da-a8e3-4c6d-8dec-77ec59a2b5f5
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action Jump
+      m_Flags: 0
+    m_Flags: 0
 --- !u!65 &304081265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -960,10 +977,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &304081270
 BoxCollider:
