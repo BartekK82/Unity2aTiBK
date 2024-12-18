@@ -10,6 +10,10 @@ public class PickUp : MonoBehaviour
 {
     float score = 0;
     [SerializeField] float speed = 1.0f;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip clip;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +25,12 @@ public class PickUp : MonoBehaviour
     {
         if (other.gameObject.tag == ("Coin"))
         {
-            
+
+            audioSource.PlayOneShot(clip);
+            StartCoroutine(MoveToPlayer(other.transform, transform, speed));
             score++;
             Debug.Log("Twój wynik to " + score);
-            StartCoroutine(MoveToPlayer(other.transform, transform, speed));
-         }
+        }
 
          IEnumerator MoveToPlayer(Transform coin, Transform player, float speed)
         {

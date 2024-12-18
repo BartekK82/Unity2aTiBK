@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Movement : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Movement : MonoBehaviour
     [SerializeField] float vectorZ;
     [SerializeField] float speed = 5;
     [SerializeField] InputAction actionJump;
+  
     Rigidbody rb;
     private void OnEnable()
     {
